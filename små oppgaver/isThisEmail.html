@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>email checker</title>
+  </head>
+  <body>
+    <script>
+      let alphakrøll = '@';
+      let email = 'insert email here';
+
+      checkIfEmail(email);
+
+      function checkIfEmail(email) {
+        if (
+          email.includes('@') === true &&
+          !email.includes(' ') &&
+          email.substring(email.lastIndexOf(alphakrøll) + 1).includes('.') ===
+            true
+        ) {
+          console.log(`this is an email: ${email}`);
+        } else {
+          console.log(`this is not an email: ${email}`);
+        }
+      }
+
+      email.substring(email.lastIndexOf(alphakrøll) + 1).includes('.');
+    </script>
+  </body>
+</html>
