@@ -24,7 +24,7 @@ function updateView() {
 
 //controller
 function fortune() {
-  let number = Math.floor(Math.random() * 5);
+  let number = Math.floor(Math.random() * wordsOfWisdom.length);
   console.log(number);
   console.log(lastNumber);
   if (number === 0 && number !== lastNumber) {
