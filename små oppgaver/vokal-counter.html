@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vokal counter</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      //model
+      let app = document.querySelector('#app');
+      let aCounter = 0;
+      let eCounter = 0;
+      let iCounter = 0;
+      let oCounter = 0;
+      let uCounter = 0;
+      let yCounter = 0;
+      let æCounter = 0;
+      let øCounter = 0;
+      let åCounter = 0;
+
+      //view
+      updateView();
+
+      function updateView() {
+        let html = /*html*/ `
+        <button onclick="findVokal('airon', 'a', 'e', 'i', 'o', 'u', 'y', 'æ', 'ø', 'å')">find out</Button>
+        <div>a = ${aCounter}</div>
+        <div>e = ${eCounter}</div>
+        <div>i = ${iCounter}</div>
+        <div>o = ${oCounter}</div>
+        <div>u = ${uCounter}</div>
+        <div>y = ${yCounter}</div>
+        <div>æ = ${æCounter}</div>
+        <div>ø = ${øCounter}</div>
+        <div>å = ${åCounter}</div>
+          `;
+        app.innerHTML = html;
+      }
+      function findVokal(
+        word,
+        char1,
+        char2,
+        char3,
+        char4,
+        char5,
+        char6,
+        char7,
+        char8,
+        char9
+      ) {
+        for (let i = 0; i < word.length; i++) {
+          if (word[i] == char1) {
+            aCounter++;
+          } else if (word[i] == char2) {
+            eCounter++;
+          } else if (word[i] == char3) {
+            iCounter++;
+          } else if (word[i] == char4) {
+            oCounter++;
+          } else if (word[i] == char5) {
+            uCounter++;
+          } else if (word[i] == char6) {
+            yCounter++;
+          } else if (word[i] == char7) {
+            æCounter++;
+          } else if (word[i] == char8) {
+            øCounter++;
+          } else if (word[i] == char9) {
+            åCounter++;
+          }
+        }
+
+        updateView();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="mainDiv"></div>
+    <button onclick="doStuff('green', 'hello World', 30, 30, 'dotted')">
+      test1
+    </button>
+    <button onclick="doStuff('gray', 'hei på deg', 20, 20, 'solid')">
+      test2
+    </button>
+    <button onclick="doStuff('yellow', 'Get academy', 10, 10, 'double')">
+      test3
+    </button>
+
+    <script>
+      function doStuff(color, text, fontSize, borderSize, borderStyle) {
+        document.getElementById('mainDiv').innerHTML = `
+          <div ${createStyle(
+            color,
+            fontSize,
+            borderSize,
+            borderStyle
+          )}>${text}</div>
+        `;
+      }
+
+      function createStyle(color, fontSize, borderSize, borderStyle) {
+        return `style="${createBackgroundColor(color)} ${createFontSize(
+          fontSize
+        )} ${createBorder(borderSize, borderStyle)}"`;
+      }
+
+      function createBackgroundColor(color) {
+        return `background-color: ${color};`;
+      }
+
+      function createFontSize(fontSize) {
+        return `font-size: ${fontSize}px;`;
+      }
+
+      function createBorder(borderSize, borderStyle) {
+        return `border-width: ${borderSize}px; ${border(borderStyle)}`;
+      }
+
+      function border(borderStyle) {
+        return `border-style: ${borderStyle};`;
+      }
+    </script>
+  </body>
+</html>

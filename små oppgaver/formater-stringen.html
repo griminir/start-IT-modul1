@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="nameUpper('viktor')">click me</button>
+    <div id="navn"></div>
+    <script>
+      function nameUpper(name) {
+        let result = name[0].toUpperCase() + name.substring(1);
+        document.querySelector('#navn').innerText = result;
+        console.log(result);
+      }
+    </script>
+  </body>
+</html>

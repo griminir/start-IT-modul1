@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lyspære</title>
+    <style>
+      div {
+        background-color: gray;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+      }
+
+      .yellow {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="lightBulb"></div>
+
+    <button onclick="turnOnLight()">lightswitch</button>
+
+    <script>
+      let bulb = false;
+
+      function swapped() {
+        bulb = !bulb;
+      }
+
+      function turnOnLight() {
+        if (bulb === false) {
+          document.querySelector('#lightBulb').classList.add('yellow');
+
+          swapped();
+        } else if (bulb === true) {
+          document.querySelector('#lightBulb').classList.remove('yellow');
+
+          swapped();
+        }
+      }
+    </script>
+  </body>
+</html>

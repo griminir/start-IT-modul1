@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduksjonstekst-oppgave</title>
+    <style>
+      .color {
+        background-color: steelblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Viktor E. Degray</h3>
+    <button id="switch" onclick="colorButton">Favoritt farge</button>
+    <pre>
+      Hei mitt navn er Viktor og jeg bor i trondheim.
+      Jeg er 29 år gammel og har bursdag 2.nov.
+      Jeg begynte å lære meg å programmere September 2023.
+      under er et placeholder bilde &darr;
+    </pre>
+    <img
+      src="regular-guy-full-body-shot-28413515.webp"
+      alt="placeholder photo"
+    />
+
+    <script>
+      let button1 = document.querySelector('#switch');
+
+      button1.addEventListener('click', () => {
+        document.body.classList.toggle('color');
+      });
+    </script>
+  </body>
+</html>

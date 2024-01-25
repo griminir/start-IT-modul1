@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tastatur</title>
+  </head>
+  <body>
+    <div id="tekstbox"></div>
+
+    <button onclick="tastatur('H')">H</button>
+    <button onclick="tastatur('A')">A</button>
+    <button onclick="tastatur('L')">L</button>
+    <button onclick="tastatur('O')">O</button>
+
+    <script>
+      function tastatur(bokstav) {
+        let tekst = document.getElementById('tekstbox');
+        tekst.innerText += bokstav;
+      }
+    </script>
+  </body>
+</html>

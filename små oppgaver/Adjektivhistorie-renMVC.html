@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVC Adjektivhistorie</title>
+    <style>
+      .box {
+        display: grid;
+        grid-template-columns: 50px 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      let adjektiv = '__';
+      let verb = '____';
+      let subjektiv = '____';
+
+      updateView();
+      function updateView() {
+        let html = `
+          <div class="historie">en ${adjektiv} katt ${verb} ${subjektiv}</div>
+
+          <div class="box">
+            <button onclick="søtPen('søt')">søt</button>
+            <button onclick="søtPen('pen')">pen</button>
+            <button onclick="gikkFløy('gikk')">gikk</button>
+            <button onclick="gikkFløy('fløy')">fløy</button>
+            <button onclick="hjemBort('hjem')">hjem</button>
+            <button onclick="hjemBort('bort')">bort</button>
+          </div>
+          `;
+
+        document.querySelector('#app').innerHTML = html;
+      }
+
+      function søtPen(input) {
+        adjektiv = input;
+        updateView();
+      }
+
+      function gikkFløy(input) {
+        verb = input;
+        updateView();
+      }
+
+      function hjemBort(input) {
+        subjektiv = input;
+        updateView();
+      }
+    </script>
+  </body>
+</html>

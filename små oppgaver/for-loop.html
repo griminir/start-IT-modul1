@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for loops</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      //model
+      let app = document.querySelector('#app');
+
+      //view
+      updateView();
+      function updateView() {
+        let html = `<button onclick="printNum()">click for numbers</button>`;
+
+        app.innerHTML = html;
+      }
+
+      function printNum() {
+        let stopValue = 10;
+        for (let i = 1; i <= stopValue; i++) {
+          let result = i * 2;
+          app.innerHTML += `<li>${result}</li>`;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>array looping</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      let fisk = ['torsk', 'sei', 'tigerhai', 'ørret'];
+      const app = document.querySelector('#app');
+
+      showMeFish();
+      function showMeFish() {
+        for (let i = 0; i < fisk.length; i++) {
+          console.log(fisk[i]);
+          app.innerHTML += ` ${fisk[i]}`;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+.outerBall {
+  height: 500px;
+  width: 500px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+}
+
+.innerBall {
+  height: 250px;
+  width: 250px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 125px;
+}
+
+.number {
+  color: black;
+  font-size: 100px;
+  margin-top: 75px;
+}

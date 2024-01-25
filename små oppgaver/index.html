@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- change the text of a button when clicked
+      <button class="js-button" onclick="buttonPress();">Unclicked</button>
+
+      <script>
+        function buttonPress() {
+          document.querySelector('.js-button').innerHTML =
+            'I have been clicked YAY!!!';
+        }
+      </script> -->
+
+    <!-- use buttons to make the number stored in the variable go up or down
+        <div id="number"></div>
+      <button onclick="add()">+</button>
+      <button onclick="subtract()">-</button>
+
+      <script>
+        let num = 0;
+
+        function add() {
+          num++
+          document.getElementById('number').innerHTML = num;
+        }
+
+        function subtract() {
+          num--
+          document.getElementById('number').innerHTML = num;
+        }
+      </script> -->
+
+    <!-- <button
+      onclick="tekstFormFarge('thank you for clicking me', 100, 'steelblue')"
+    >
+      click me!
+    </button>
+    <button
+      onclick="tekstFormFarge('omg, you messed up wrong button', 200, 'red')"
+    >
+      no, click me!
+    </button>
+    <div class="box"></div>
+
+    <script>
+      function tekstFormFarge(tekst, form, farge) {
+        document.querySelector('.box').innerHTML = `
+          <div style="background-color:${farge}; height:${form}px">${tekst}</div>
+        `;
+      }
+    </script> -->
+
+    <div onclick="toggleColor('green')" style="background-color: green">
+      green
+    </div>
+    <div onclick="toggleColor('blue')" style="background-color: blue">blue</div>
+    <div onclick="toggleColor('red')" style="background-color: red">red</div>
+
+    <script>
+      function toggleColor(color) {
+        let currentColor = document.body.style.backgroundColor;
+
+        if (currentColor === color) {
+          document.body.style.backgroundColor = '';
+        } else {
+          document.body.style.backgroundColor = color;
+        }
+      }
+    </script>
+  </body>
+</html>

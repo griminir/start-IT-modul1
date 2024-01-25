@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stoppeklokke</title>
+  </head>
+  <body>
+    <div id="timerDisplay">0</div>
+
+    <button onclick="startTimer();">start</button>
+
+    <button onclick="lap()">lap</button>
+
+    <button onclick="reset()">reset</button>
+
+    <script>
+      let time = 0;
+      let myTimer;
+
+      function timer() {
+        time++;
+        console.log(time);
+        updateTimerDisplay();
+      }
+
+      function startTimer() {
+        myTimer = setInterval(timer, 1000);
+      }
+
+      function lap() {
+        console.log(`your time was: ${time}`);
+        updateTimerDisplay();
+        clearInterval(myTimer);
+        time = 0;
+      }
+
+      function reset() {
+        clearInterval(myTimer);
+        time = 0;
+        console.log('timer reset');
+        updateTimerDisplay();
+      }
+
+      function updateTimerDisplay() {
+        document.getElementById('timerDisplay').textContent = time;
+      }
+    </script>
+  </body>
+</html>

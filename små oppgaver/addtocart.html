@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add to cart</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      //model
+      const app = document.querySelector('#app');
+      let cart = [];
+
+      //view
+      updateView();
+
+      function updateView() {
+        let html = /*html*/ `
+          <input id="shopper" type="text" placeholder="what do you wanna buy?">
+          <button onclick="addToCart()">add to cart</button>
+          <div id="cart">${cart}</div>
+        `;
+        app.innerHTML = html;
+      }
+
+      //controller
+      function addToCart() {
+        const shopper = document.querySelector('#shopper');
+        cart.push(shopper.value);
+        console.log(cart);
+        updateView();
+      }
+    </script>
+  </body>
+</html>

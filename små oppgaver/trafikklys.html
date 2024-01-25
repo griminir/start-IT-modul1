@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trafikklys</title>
+    <style>
+      .light,
+      .red,
+      .orange,
+      .green {
+        height: 50px;
+        width: 50px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .red {
+        background-color: red;
+      }
+
+      .orange {
+        background-color: orangered;
+      }
+
+      .green {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="light btn1"></span>
+    <br />
+    <span class="light btn2"></span>
+    <br />
+    <span class="light btn3"></span>
+    <br />
+
+    <button onclick="lightUp('btn1' ,'red')">red</button>
+
+    <button onclick="lightUp('btn2', 'orange')">orange</button>
+
+    <button onclick="lightUp('btn3', 'green')">green</button>
+
+    <button onclick="automation()">automation</button>
+
+    <script>
+      function lightUp(buttonId, color) {
+        document.querySelector(`.${buttonId}`).classList.toggle(color);
+      }
+
+      function automation() {
+        setTimeout(() => {
+          lightUp('btn1', 'red');
+          setTimeout(() => {
+            lightUp('btn2', 'orange');
+            setTimeout(() => {
+              lightUp('btn3', 'green');
+            }, 2000);
+          }, 2000);
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
