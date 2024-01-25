@@ -21,3 +21,10 @@
   font-size: 100px;
   margin-top: 75px;
 }
+
+.words {
+  color: steelblue;
+  font-size: 40px;
+  text-align: center;
+  width: 500px;
+}
