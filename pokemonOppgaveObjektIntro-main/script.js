@@ -80,12 +80,11 @@ function caughtPokemonView() {
 
 function showPokemonView() {
   app.innerHTML = /*html*/ `
-  <h1> Dine pokemon:</h1>
-  <div class="teamcContainer"></div>`;
+  <div class="teamcContainer">
+    <h1> Dine pokemon:</h1>
+  </div>`;
   for (let i = 0; i < player.pokemon.length; i++) {
-    document.querySelector(
-      '.teamContainer'
-    ).innerHTML += `<div class='team'> ${player.pokemon[i].name} <img src="${player.pokemon[i].image}" /></div>`;
+    app.innerHTML += `<div class='team'> ${player.pokemon[i].name} <img src="${player.pokemon[i].image}" /></div>`;
   }
   app.innerHTML += /*html*/ `
     <div class="buttonContainer">
