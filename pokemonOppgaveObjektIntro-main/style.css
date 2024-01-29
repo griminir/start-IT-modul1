@@ -49,3 +49,9 @@ img {
   justify-content: center;
   flex-direction: column;
 }
+
+.myTeam {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
