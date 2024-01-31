@@ -10,6 +10,10 @@
   height: auto;
 }
 
+.inventoryBox {
+  height: 500px;
+}
+
 .inventoryOpen {
   width: 400px;
 }
@@ -18,7 +22,7 @@
   flex-direction: row;
 }
 .bottomBar {
-  padding-top: 500px;
+  padding-top: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -31,7 +35,31 @@
 }
 
 .shopkeeper {
-  padding-left: 10px;
   max-width: 20vw;
   height: auto;
+  border-radius: 30px;
+}
+
+#shopkeeper {
+  display: flex;
+  flex-direction: row;
+}
+#pitch {
+  color: red;
+  font-size: larger;
+  background-color: antiquewhite;
+  height: 30px;
+  border-radius: 10px;
+}
+
+body {
+  background-image: url(https://i.pinimg.com/736x/af/55/66/af5566e6f5651b58cb2656b5d98aafdb.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

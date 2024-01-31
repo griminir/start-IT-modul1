@@ -8,30 +8,38 @@
   </head>
   <body>
     <div class="topBar">
-      <div class="inventoryButton" onclick="openInv()">Inventory</div>
+      <div class="inventoryButton" onclick="toggleInv()">Inventory</div>
 
       <div class="player">
         <img class="playerPic" src="img/pjuskenPlayer.jpg" alt="player img" />
       </div>
       <div class="hp"><img src="img/hpbarfull.JPG" alt="hp Bar" /></div>
     </div>
-    <div id="inventory"></div>
+    <div id="inventory" class="inventoryBox"></div>
 
-    <div class="bottomBar">
-      <div id="1" onclick="getItem(1)">
-        <img class="item" src="img/item1.gif" alt="sword" />
-      </div>
-      <div id="2" onclick="getItem(2)">
-        <img class="item" src="img/item2.gif" alt="" />
-      </div>
-      <div id="3" onclick="getItem(3)">
-        <img class="item" src="img/item3.gif" alt="" />
-      </div>
-      <div id="4" onclick="getItem(4)">
-        <img class="item" src="img/item4.gif" alt="" />
+    <div class="wrap">
+      <div class="bottomBar">
+        <div id="1" onclick="getItem(1)">
+          <img class="item" src="img/item1.gif" alt="sword" />
+        </div>
+        <div id="2" onclick="getItem(2)">
+          <img class="item" src="img/item2.gif" alt="" />
+        </div>
+        <div id="3" onclick="getItem(3)">
+          <img class="item" src="img/item3.gif" alt="" />
+        </div>
+        <div id="4" onclick="getItem(4)">
+          <img class="item" src="img/item4.gif" alt="" />
+        </div>
       </div>
       <div id="shopkeeper">
-        <img class="shopkeeper" src="img/kai.jpg" alt="shopkeeper" />
+        <img
+          class="shopkeeper"
+          onclick="speak()"
+          src="img/kai.jpg"
+          alt="shopkeeper"
+        />
+        <div id="pitch"></div>
       </div>
     </div>
 
