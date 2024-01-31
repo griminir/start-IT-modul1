@@ -49,6 +49,7 @@
 #pitch {
   color: red;
   font-size: larger;
+  font-family: fantasy;
   background-color: antiquewhite;
   height: 30px;
   border-radius: 10px;
