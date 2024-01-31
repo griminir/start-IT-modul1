@@ -3,6 +3,8 @@
   border: 1px solid black;
   width: 25%;
   user-select: none;
+  background-color: gray;
+  color: whitesmoke;
 }
 .playerPic {
   display: flex;
