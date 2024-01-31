@@ -1,0 +1,37 @@
+.inventoryButton {
+  font-size: xx-large;
+  border: 1px solid black;
+  width: 25%;
+  user-select: none;
+}
+.playerPic {
+  display: flex;
+  max-width: 50px;
+  height: auto;
+}
+
+.inventoryOpen {
+  width: 400px;
+}
+.topBar {
+  display: flex;
+  flex-direction: row;
+}
+.bottomBar {
+  padding-top: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.item {
+  max-width: 20vw;
+  height: 20vw;
+}
+
+.shopkeeper {
+  padding-left: 10px;
+  max-width: 20vw;
+  height: auto;
+}

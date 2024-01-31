@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team oppagave uke 2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="topBar">
+      <div class="inventoryButton" onclick="openInv()">Inventory</div>
+
+      <div class="player">
+        <img class="playerPic" src="img/pjuskenPlayer.jpg" alt="player img" />
+      </div>
+      <div class="hp"><img src="img/hpbarfull.JPG" alt="hp Bar" /></div>
+    </div>
+    <div id="inventory"></div>
+
+    <div class="bottomBar">
+      <div id="1" onclick="getItem(1)">
+        <img class="item" src="img/item1.gif" alt="sword" />
+      </div>
+      <div id="2" onclick="getItem(2)">
+        <img class="item" src="img/item2.gif" alt="" />
+      </div>
+      <div id="3" onclick="getItem(3)">
+        <img class="item" src="img/item3.gif" alt="" />
+      </div>
+      <div id="4" onclick="getItem(4)">
+        <img class="item" src="img/item4.gif" alt="" />
+      </div>
+      <div id="shopkeeper">
+        <img class="shopkeeper" src="img/kai.jpg" alt="shopkeeper" />
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
